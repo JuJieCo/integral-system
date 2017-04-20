@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+     <package name="wzjPackage" namespace="/wzj" extends="struts-global">  
+        <action name="wzjAction" class="com.jujie.wzj.action.WzjAction">
+        	<result name="wzjlist">/wzj/wzj_list.jsp</result>
+        	<result name="showwzj">/wzj/wzj_show.jsp</result>
+        	<result name="addofedit">/wzj/wzj_edit.jsp</result>
+        	<result name="updateofedit">/wzj/wzj_edit.jsp</result>
+        	
+        	<result name="input">/wzj/wzj_list.jsp</result>
+        </action>
+     </package>
+     
+</struts>
+

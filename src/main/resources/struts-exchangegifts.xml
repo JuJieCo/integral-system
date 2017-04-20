@@ -1,0 +1,16 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+     <package name="ExchangeGiftsPackage" namespace="/exchangeGifts" extends="struts-global">  
+     
+        <action name="exchangeGiftsAction" class="com.jujie.integral.action.ExchangeGiftsAction">
+        	<result name="choosecust">/integral/exchange_choosecust.jsp</result>
+        	<result name="exchangelist">/integral/exchange_list.jsp</result>
+        	
+        	<result name="input">/integral/exchange_choosecust.jsp</result>
+        </action>
+     </package>
+     
+</struts>

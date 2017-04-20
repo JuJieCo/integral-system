@@ -1,0 +1,16 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+     <package name="dataPackage" namespace="/data" extends="struts-global">  
+        <action name="dataAction" class="com.jujie.data.action.DataDetailsAction">
+        	<result name="import">/data/import_data.jsp</result>
+        	<result name="write">/data/write_data.jsp</result>
+        	<result name="fxac">/data/analysis_chart.jsp</result>  	
+        </action>
+     </package>
+     
+</struts>
+
+

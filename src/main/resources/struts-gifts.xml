@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+     <package name="giftsPackage" namespace="/gifts" extends="struts-global">  
+        <action name="giftsInfoAction" class="com.jujie.gifts.action.GiftsInfoAction">
+        	<result name="list">/gifts/giftsinfo_list.jsp</result>
+        	<result name="showedit">/gifts/giftsinfo_edit.jsp</result>
+        	<result name="show">/gifts/giftsinfo_show.jsp</result>
+        	
+        	<result name="exchangelist">/gifts/customer_integral_exchange_list.jsp</result>
+        	
+        	<result name="input">/gifts/giftsinfo_list.jsp</result>
+        </action>
+        
+        <action name="giftsDetailsAction" class="com.jujie.gifts.action.GiftsDetailsAction">
+        	<result name="list">/gifts/giftsDetails_list.jsp</result>  	        	
+        	<result name="input">/gifts/giftsDetails_list.jsp</result>
+        </action>
+     </package>  
+</struts>
+
+

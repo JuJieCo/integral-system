@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+     <package name="intecusdetPackage" namespace="/integral" extends="struts-global">  
+     
+        <action name="integraCusDetailsAction" class="com.jujie.integral.action.InteCusDetAction">
+        	<result name="list">/integral/intecusdet_list.jsp</result>
+        	<result name="showrules">/integral/intecusdet_show.jsp</result>
+        	<result name="addofedit">/integral/intecusdet_edit.jsp</result>
+        	<result name="updateofedit">/integral/intecusdet_edit.jsp</result>
+        	
+        	<result name="input">/integral/intecusdet_list.jsp</result>
+        </action>
+     </package>
+     
+</struts>

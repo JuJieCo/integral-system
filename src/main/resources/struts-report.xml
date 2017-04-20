@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+     <package name="reportPackage" namespace="/report" extends="struts-global">  
+        <action name="reportAction" class="com.jujie.report.action.ReportAction">
+        	<result name="import">/report/acclevel.jsp</result>
+        	<result name="acclevel">/report/acclevel.jsp</result>
+        	<result name="reportData">/report/reportData.jsp</result>
+        	<result name="assets">/report/assets.jsp</result>
+        	<result name="honest">/report/honest.jsp</result>
+            <result name="querys">/report/querys.jsp</result>
+        </action>
+     </package>
+     
+</struts>
+
+

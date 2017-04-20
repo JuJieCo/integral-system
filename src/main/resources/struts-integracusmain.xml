@@ -1,0 +1,20 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+     <package name="integraCusMainPackage" namespace="/integral" extends="struts-global">  
+     
+        <action name="integraCusMainAction" class="com.jujie.integral.action.IntegraCusMainAction">
+        	<result name="list">/integral/integracusmain_list.jsp</result>
+        	<result name="mangerMain">/integral/mangerIntegracusMain.jsp</result>
+        	<result name="exchangeCusMainlist">/integral/exchangeCusMain_list.jsp</result>
+        	<result name="showrules">/integral/integracusmain_show.jsp</result>
+        	<result name="addofedit">/integral/integracusmain_edit.jsp</result>
+        	<result name="updateofedit">/integral/integracusmain_edit.jsp</result>
+        	<result name="input">/integral/integracusmain_list.jsp</result>
+        	<result name="sumIntegraCusMain">/integral/sumIntegracusMain.jsp</result>
+           </action>
+     </package>
+     
+</struts>

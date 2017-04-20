@@ -1,0 +1,20 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+     <package name="customerInfoPackage" namespace="/customerInfo" extends="struts-global">  
+        <action name="customerInfoAction" class="com.jujie.customerinfo.action.CustomerInfoAction">
+        	<result name="customerinfolist">/customerinfo/customerinfo_list.jsp</result>
+        	<result name="showcustomerinfo">/customerinfo/customerinfo_show.jsp</result>
+        	<result name="addofedit">/customerinfo/customerinfo_edit.jsp</result>
+        	<result name="updateofedit">/customerinfo/customerinfo_edit.jsp</result>
+        	<result name="multiplequery">/customerinfo/customerinfo_multiplequery.jsp</result>
+        	<result name="assess">/customerinfo/customerinfo_assess.jsp</result>
+        	<result name="birthdayreminder">/customerinfo/birthdayreminder.jsp</result>
+        	<result name="input">/customerinfo/customerinfo_list.jsp</result>
+        </action>
+     </package>
+     
+</struts>
+

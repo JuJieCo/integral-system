@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="integraCusMaindao" parent="springJdbcDs" class="com.jujie.integral.dao.IntegraCusMainDaoImpl" />
+	<bean id="IntegraCusMainServer" class="com.jujie.integral.server.IntegraCusMainServerImpl" >
+		<property name="integraCusMainDao" ref="integraCusMaindao"></property>
+		<property name="dataDetailsDao" ref="dataDetailsDao"></property>
+		<property name="rulesDAO" ref="rulesdao"></property>
+		<property name="customerInfoDao" ref="customerInfoDao"></property>
+		<property name="inteCusDetDaoImpl" ref="integraCusDetailsdao"></property>
+		<property name="userDao" ref="userDao"></property>
+		<property name="agenceDAO" ref="zhang"></property>
+    </bean>
+</beans>

@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+     <package name="rulesPackage" namespace="/rules" extends="struts-global">  
+     
+        <action name="rulesAction" class="com.jujie.rules.action.RulesAction">
+        	<result name="list">/rules/rules_list.jsp</result>
+        	<result name="showrules">/rules/rules_show.jsp</result>
+        	<result name="addofedit">/rules/rules_edit.jsp</result>
+        	<result name="updateofedit">/rules/rules_edit.jsp</result>
+        	
+        	<result name="input">/rules/rules_list.jsp</result>
+        </action>
+     </package>
+     
+</struts>

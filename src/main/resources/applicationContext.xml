@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:context="http://www.springframework.org/schema/context"    
+    xmlns:aop="http://www.springframework.org/schema/aop"    
+    xsi:schemaLocation="http://www.springframework.org/schema/beans    
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd    
+    http://www.springframework.org/schema/context   
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd    
+    http://www.springframework.org/schema/aop    
+    http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">  
+
+
+<import resource="classpath:applicationContext-db.xml"/>
+<import resource="classpath:applicationContext-user.xml"/>
+<import resource="classpath:applicationContext-login.xml"/>
+<import resource="classpath:applicationContext-logger.xml"/>
+<import resource="classpath:applicationContext-agence.xml"/>
+<import resource="classpath:applicationContext-gifts.xml"/>
+<import resource="classpath:applicationContext-wzj.xml"/>
+<import resource="classpath:applicationContext-data.xml"/>	
+<import resource="classpath:applicationContext-rules.xml"/>
+<import resource="classpath:applicationContext-customerInfo.xml"/>
+<import resource="classpath:applicationContext-intecusdet.xml"/>
+<import resource="classpath:applicationContext-integracusmain.xml"/>	
+<import resource="classpath:applicationContext-exchangegifts.xml"/>	
+<import resource="classpath:applicationContext-report.xml"/>	
+	
+<bean id="logAdvice" class="com.jujie.log.LogAdvice"></bean>
+ 
+  <!--将日志bean和业务bean通过代理的方式进行代理整合-->
+    <bean name="logmanager" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+       <property name="interceptorNames">
+           <list>
+               <value>logAdvice</value>
+           </list>
+       </property>
+       <property name="beanNames">
+           <list>
+              <value>loginRoleFunServer</value>
+              <!-- 此处可以放置多个业务bean --> 
+           </list>
+       </property>
+    </bean>
+</beans>
